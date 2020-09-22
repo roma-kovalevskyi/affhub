@@ -1,0 +1,221 @@
+.congratulations {
+    text-align: center;
+    padding: 100px 0 110px 0;
+    &__title {
+        margin: 0 0 30px 0;
+    }
+    &__text {
+        font-family: $secondary-font;
+        font-size: 1rem;
+        line-height: 30px;
+        color: #8E819F;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    &__preview-certificate {
+        background: #231C43;
+        border: 1px solid rgba(255, 87, 158, 0.3);
+        &-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+            margin-bottom: 26px;
+            background: url(../img/congratulations.png) center/contain no-repeat;
+        }
+        &-img {
+            display: block;
+        }
+    }
+    &__download-certificate {
+        font-size: 1.125rem;
+        color: $color-pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            text-decoration: underline;
+        }
+        img {
+            margin-left: 16px;
+        }
+    }
+    &-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__caption {
+            font-family: $secondary-font;
+            font-size: 1.125rem;
+            color: #fff;
+            margin-right: 38px;
+        }
+        &__links-box {
+            display: flex;
+            align-items: center;
+        }
+        &__link+&__link {
+            margin-left: 34px;
+        }
+    }
+}
+
+.partner-product {
+    background-color: $color-pink;
+    border-radius: 55px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 75px auto;
+    &__caption,
+    &__stream-link {
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: #fff;
+    }
+    &__photo {
+        margin: -30px 30px 0 30px;
+    }
+    &__info,
+    &__ref,
+    &__stream-link {
+        display: flex;
+        align-items: center;
+    }
+    &__stream-link {
+        span {
+            margin-right: 26px;
+        }
+    }
+    &__site,
+    &__referal-link {
+        font-family: $secondary-font;
+        font-size: 18px;
+        color: #fff;
+    }
+    &__referal-link {
+        max-width: 288px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    &__copy-link {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+}
+
+
+/* Congratulations media queries */
+
+@media screen and (max-width: 1279px) {
+    .congratulations {
+        padding: 80px 0 100px;
+    }
+    .partner-product {
+        padding: 20px;
+        &__caption,
+        &__stream-link {
+            font-size: 1.4rem;
+        }
+        &__stream-link {
+            span {
+                margin-right: 20px;
+            }
+        }
+        &__copy-link {
+            margin-right: 10px;
+        }
+        &__photo {
+            margin: -30px 16px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .congratulations {
+        padding: 70px 0 90px;
+    }
+    .partner-product {
+        border-radius: 10px;
+        flex-direction: column;
+        &__ref {
+            margin: 20px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .congratulations {
+        padding: 50px 0 70px;
+    }
+    .partner-product {
+        margin: 60px auto;
+        &__caption,
+        &__stream-link {
+            font-size: 1.2rem;
+        }
+        &__stream-link {
+            svg {
+                width: 28px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .congratulations {
+        padding: 40px 0 50px;
+        &__title {
+            font-size: 1.6rem;
+            line-height: 36px;
+        }
+        &__preview-certificate-box {
+            margin-top: 50px;
+        }
+        &__preview-certificate {
+            width: 75%;
+            margin: 0 auto;
+        }
+        &-social {
+            flex-direction: column;
+            &__caption {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .partner-product {
+        margin: 50px auto;
+        &__referal-link {
+            max-width: 250px;
+        }
+        &__photo {
+            margin: -30px 12px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .partner-product {
+        padding: 25px 20px;
+        &__info,
+        &__ref {
+            flex-direction: column;
+        }
+        &__ref {
+            margin: 25px 0;
+        }
+        &__copy-link {
+            margin-right: 0;
+            margin-bottom: 5px;
+        }
+        &__photo {
+            margin: 12px 0;
+        }
+    }
+}

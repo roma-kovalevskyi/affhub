@@ -1,0 +1,207 @@
+.course-info {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:first-child {
+            padding: 50px 0;
+        }
+        &:last-child {
+            border-top: 1px solid $color-pink;
+            padding: 32px 0;
+        }
+    }
+    &__title {
+        flex: 0 0 calc(100% / 12 * 4);
+    }
+    &__desc {
+        flex: 0 0 calc(100% / 12 * 6);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn-box {
+        flex: 0 0 calc(100% / 12 * 2);
+    }
+    &__chart {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        flex: 0 0 150px;
+        position: relative;
+        background: conic-gradient(#ff579e 25%, #3a2758 0);
+        &-value {
+            font-family: $secondary-font;
+            font-size: 1.875rem;
+            color: #FFFFFF;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__text {
+        font-family: $secondary-font;
+        font-size: 1rem;
+        line-height: 30px;
+        color: #8E819F;
+        margin-left: 50px;
+        margin-right: 70px;
+    }
+    &__start {
+        background-color: $color-pink;
+        border-radius: 50px;
+        padding: 12px 15px;
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-align: center;
+        color: #FFFFFF;
+        display: block;
+        transition: $transition-speed;
+        &:hover {
+            background-color: darken($color-pink, 5%);
+        }
+    }
+    &__span {
+        color: #8E819F;
+        font-size: 1rem;
+        line-height: 30px;
+        font-family: $secondary-font;
+        position: relative;
+    }
+    &__span+&__span {
+        margin-left: 60px;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: -30px;
+            width: 1px;
+            height: 30px;
+            transform: translateY(-50%);
+            background-color: #45405b;
+        }
+    }
+    &__sections,
+    &__steps,
+    &__tests {
+        &-amount {
+            color: $color-pink;
+        }
+    }
+}
+
+
+/* Course-info media queries */
+
+@media screen and (max-width: 1450px) {
+    .course-info {
+        &__title {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .course-info {
+        &__title {
+            font-size: 2rem;
+            line-height: 45px;
+            padding-right: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .course-info {
+        &__desc {
+            flex: 0 0 calc(100% / 12 * 5);
+            flex-direction: column;
+            padding: 0 20px;
+        }
+        &__chart {
+            width: 130px;
+            height: 130px;
+            flex: 0 0 130px;
+            &-value {
+                font-size: 1.5rem;
+            }
+        }
+        &__text {
+            margin: 20px 0 0 0;
+        }
+        &__btn-box {
+            flex: 0 0 calc(100% / 12 * 3);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .course-info {
+        &__inner {
+            flex-direction: column;
+        }
+        &__title {
+            font-size: 1.7rem;
+            line-height: 38px;
+            padding-right: 0;
+            text-align: center;
+        }
+        &__title,
+        &__desc,
+        &__btn-box {
+            flex: 0 0 100%;
+        }
+        &__start {
+            padding: 12px 40px;
+        }
+        &__chart {
+            margin: 30px 0;
+        }
+        &__desc {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 0;
+        }
+        &__span+&__span {
+            margin-left: 30px;
+            &:before {
+                left: -15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .course-info {
+        &__title {
+            font-size: 1.6rem;
+            line-height: 36px;
+        }
+        &__inner {
+            &:first-child {
+                padding: 40px 0 50px;
+            }
+            &:last-child {
+                padding: 30px 0;
+            }
+        }
+        &__details {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+        &__span+&__span {
+            margin-top: 20px;
+            margin-left: 0;
+            &:before {
+                width: 100%;
+                height: 1px;
+                top: -10px;
+                left: 0;
+                transform: initial;
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.course-sections {
+    padding-bottom: 50px;
+    &__item+&__item {
+        margin-top: 10px;
+    }
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 35px 30px;
+        background: #251440;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        transition: $transition-speed;
+        &:hover {
+            background: #321643;
+            border: 1px solid #FF579E;
+        }
+        &-number {
+            flex: 0 0 calc(100% / 12 * 1);
+            font-weight: bold;
+            font-size: 2.5rem;
+            line-height: 40px;
+            color: #7E6A98;
+        }
+        &-text-box {
+            flex: 0 0 calc(100% / 12 * 9);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &-title {
+            flex: 0 0 calc(100% / 12 * 4);
+            min-height: 76px;
+            font-weight: 500;
+            font-size: 1.875rem;
+            line-height: 38px;
+            color: #FFFFFF;
+        }
+        &-desc {
+            flex: 0 0 calc(100% / 12 * 8);
+            font-family: $secondary-font;
+            font-size: 1rem;
+            line-height: 30px;
+            color: #8E819F;
+            margin-top: 10px;
+            padding: 0 25px;
+        }
+        &-state {
+            &-box {
+                flex: 0 0 calc(100% / 12 * 2);
+                display: flex;
+                justify-content: flex-end;
+            }
+            &-caption {
+                font-size: .875rem;
+                font-family: $secondary-font;
+                color: #fff;
+                margin-left: 10px;
+            }
+        }
+    }
+    &__item.inactive {
+        background: #1C1238;
+        &:hover {
+            border: 1px solid transparent;
+            background: #1C1238;
+        }
+        .course-sections__item {
+            &-number,
+            &-title,
+            &-desc {
+                opacity: 0.5;
+            }
+            &-state {
+                background: #3B2A56;
+                &-caption {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+
+/* Course-sections media queries */
+
+@media screen and (max-width: 1680px) {
+    .course-sections {
+        &__item {
+            &-number {
+                font-size: 1.875rem;
+            }
+            &-title {
+                font-size: 1.6rem;
+                line-height: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .course-sections {
+        &__item {
+            padding: 30px 18px;
+            &-text-box {
+                flex: 0 0 calc(100% / 12 * 8);
+            }
+            &-state-box {
+                flex: 0 0 calc(100% / 12 * 3);
+            }
+            &-state {
+                margin-top: 8px;
+            }
+            &-title {
+                font-size: 1.25rem;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .course-sections {
+        &__item {
+            padding: 25px 18px;
+            &-title {
+                min-height: 100%;
+                margin-top: 5px;
+            }
+            &-text-box {
+                flex-direction: column;
+                padding: 0 15px;
+            }
+            &-desc {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .course-sections {
+        &__item {
+            &-text-box {
+                flex: 0 0 calc(100% / 12 * 7);
+            }
+            &-state-box {
+                flex: 0 0 calc(100% / 12 * 4);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .course-sections {
+        &__item {
+            padding: 15px;
+            &-number {
+                font-size: 1.25rem;
+            }
+            &-title {
+                font-size: 1rem;
+                line-height: 25px;
+                margin-top: 10px;
+            }
+            &-text-box {
+                flex: 0 0 calc(100% / 12 * 9);
+            }
+            &-state-box {
+                flex: 0 0 calc(100% / 12 * 2);
+            }
+            &-desc {
+                font-size: 0.875rem;
+                line-height: 24px;
+            }
+            &-state {
+                width: 30px;
+                padding: 0;
+                margin-top: 5px;
+                justify-content: center;
+                &-caption {
+                    display: none;
+                }
+            }
+        }
+    }
+}

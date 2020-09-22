@@ -1,0 +1,178 @@
+*,
+ :after,
+ :before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $main-font;
+    background-color: #161032;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input {
+    outline: none !important;
+    border: none;
+}
+
+.locked {
+    overflow: hidden;
+}
+
+.main {
+    background: url(../img/main-bg.jpg) center top/contain no-repeat;
+}
+
+.container {
+    width: 1430px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 50px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.state {
+    width: 160px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    transition: $transition-speed;
+    &_pass {
+        background-color: $color-pink;
+        &:hover {
+            background-color: darken($color-pink, 5%);
+        }
+    }
+    &_continue {
+        background-color: $color-continue;
+        &:hover {
+            background-color: darken($color-continue, 5%);
+        }
+    }
+    &_failed {
+        background-color: $color-failed;
+        &:hover {
+            background-color: darken($color-failed, 5%);
+        }
+    }
+    &_done {
+        background-color: $color-done;
+        &:hover {
+            background-color: darken($color-done, 5%);
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__link+&__link {
+        margin-left: 23px;
+    }
+    &__link {
+        &:hover .social__img--fb {
+            path {
+                fill: #3b5998;
+            }
+        }
+        &:hover .social__img--telegram {
+            path {
+                fill: #08c;
+            }
+        }
+        &:hover .social__img--insta {
+            path {
+                fill: url(#foot-rg);
+            }
+        }
+        &:hover .social__img--vk {
+            path {
+                fill: #4c75a3;
+            }
+        }
+    }
+    &__img {
+        path {
+            transition: $transition-speed;
+        }
+    }
+}
+
+
+/* Main media queries */
+
+@media screen and (max-width: 1679px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        width: 100%;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background-color: #10062e;
+    }
+    .main {
+        background: url(../img/bg-mob.webp) no-repeat center top;
+        background-size: 770px;
+    }
+    .container {
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

@@ -52,12 +52,6 @@
                 display: flex;
                 justify-content: flex-end;
             }
-            &-caption {
-                font-size: .875rem;
-                font-family: $secondary-font;
-                color: #fff;
-                margin-left: 10px;
-            }
         }
     }
     &__item.inactive {
@@ -92,7 +86,7 @@
                 font-size: 1.875rem;
             }
             &-title {
-                font-size: 1.6rem;
+                font-size: 1.5625rem;
                 line-height: 36px;
             }
         }

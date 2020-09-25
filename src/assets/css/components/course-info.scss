@@ -23,21 +23,13 @@
     &__btn-box {
         flex: 0 0 calc(100% / 12 * 2);
     }
-    &__chart {
+    &__progress {
         width: 150px;
         height: 150px;
-        border-radius: 50%;
         flex: 0 0 150px;
-        position: relative;
         background: conic-gradient(#ff579e 25%, #3a2758 0);
         &-value {
-            font-family: $secondary-font;
             font-size: 1.875rem;
-            color: #FFFFFF;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
     }
     &__text {
@@ -94,10 +86,11 @@
 
 /* Course-info media queries */
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1680px) {
     .course-info {
         &__title {
             font-size: 2.3rem;
+            line-height: 46px;
         }
     }
 }
@@ -106,37 +99,16 @@
     .course-info {
         &__title {
             font-size: 2rem;
-            line-height: 45px;
+            line-height: 42px;
             padding-right: 15px;
+        }
+        &__text {
+            margin-right: 50px;
         }
     }
 }
 
 @media screen and (max-width: 1023px) {
-    .course-info {
-        &__desc {
-            flex: 0 0 calc(100% / 12 * 5);
-            flex-direction: column;
-            padding: 0 20px;
-        }
-        &__chart {
-            width: 130px;
-            height: 130px;
-            flex: 0 0 130px;
-            &-value {
-                font-size: 1.5rem;
-            }
-        }
-        &__text {
-            margin: 20px 0 0 0;
-        }
-        &__btn-box {
-            flex: 0 0 calc(100% / 12 * 3);
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
     .course-info {
         &__inner {
             flex-direction: column;
@@ -152,11 +124,20 @@
         &__btn-box {
             flex: 0 0 100%;
         }
+        &__progress {
+            width: 130px;
+            height: 130px;
+            flex: 0 0 130px;
+            margin: 30px 0;
+            &-value {
+                font-size: 1.5rem;
+            }
+        }
+        &__text {
+            margin: 20px 0 0 0;
+        }
         &__start {
             padding: 12px 40px;
-        }
-        &__chart {
-            margin: 30px 0;
         }
         &__desc {
             flex-direction: column-reverse;
@@ -175,7 +156,7 @@
 @media screen and (max-width: 575px) {
     .course-info {
         &__title {
-            font-size: 1.6rem;
+            font-size: 1.5625rem;
             line-height: 36px;
         }
         &__inner {

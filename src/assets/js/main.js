@@ -19,6 +19,12 @@ $(document).ready(function() {
         }
     });
 
+    // Select answer options
+    $('.answer-option__checkbox').on('click', function() {
+        $('.answer-option').removeClass('selected').addClass('disabled');
+        $(this).parent().removeClass('disabled').addClass('selected');
+    });
+
     // Articles slider
     $('.articles-slider').slick({
         autoplay: true,

@@ -171,6 +171,16 @@
 
 /* Header media queries */
 
+@media screen and (max-width: 1450px) {
+    .logo {
+        &__img {
+            left: -40px;
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
+
 @media screen and (max-width: 1279px) {
     .header {
         &__inner {

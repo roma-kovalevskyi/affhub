@@ -26,6 +26,10 @@
             display: block;
         }
     }
+    &__download-box {
+        display: flex;
+        justify-content: center;
+    }
     &__download-certificate {
         font-size: 1.125rem;
         color: $color-pink;
@@ -71,7 +75,7 @@
     &__caption,
     &__stream-link {
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: 1.5625rem;
         color: #fff;
     }
     &__photo {
@@ -171,7 +175,7 @@
     .congratulations {
         padding: 40px 0 50px;
         &__title {
-            font-size: 1.6rem;
+            font-size: 1.5625rem;
             line-height: 36px;
         }
         &__preview-certificate-box {

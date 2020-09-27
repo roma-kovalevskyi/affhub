@@ -49,10 +49,6 @@
 }
 
 .article-preview {
-    &__photo {
-        display: block;
-        border-radius: 6px;
-    }
     &__info {
         margin: 30px 0 16px;
         font-size: .875rem;
@@ -73,24 +69,6 @@
     &__video-link {
         display: block;
         outline: none;
-    }
-    &__video-link {
-        position: relative;
-        &:before {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(37, 20, 64, 0.5);
-        }
-    }
-    &__play-video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
     &__events {
         color: $color-pink;
@@ -147,9 +125,7 @@
             line-height: 35px;
         }
         &__play-video {
-            img {
-                width: 50px;
-            }
+            width: 50px;
         }
     }
 }

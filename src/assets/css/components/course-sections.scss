@@ -23,14 +23,8 @@
             line-height: 40px;
             color: #7E6A98;
         }
-        &-text-box {
-            flex: 0 0 calc(100% / 12 * 9);
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
         &-title {
-            flex: 0 0 calc(100% / 12 * 4);
+            flex: 0 0 calc(100% / 12 * 3);
             min-height: 76px;
             font-weight: 500;
             font-size: 1.875rem;
@@ -38,7 +32,7 @@
             color: #FFFFFF;
         }
         &-desc {
-            flex: 0 0 calc(100% / 12 * 8);
+            flex: 0 0 calc(100% / 12 * 6);
             font-family: $secondary-font;
             font-size: 1rem;
             line-height: 30px;
@@ -97,11 +91,11 @@
     .course-sections {
         &__item {
             padding: 30px 18px;
-            &-text-box {
-                flex: 0 0 calc(100% / 12 * 8);
+            &-desc {
+                flex: 0 0 calc(100% / 12 * 5.5);
             }
             &-state-box {
-                flex: 0 0 calc(100% / 12 * 3);
+                flex: 0 0 calc(100% / 12 * 2.5);
             }
             &-state {
                 margin-top: 8px;
@@ -118,29 +112,32 @@
     .course-sections {
         &__item {
             padding: 25px 18px;
+            flex-wrap: wrap;
             &-title {
                 min-height: 100%;
                 margin-top: 5px;
             }
-            &-text-box {
-                flex-direction: column;
-                padding: 0 15px;
+            &-number {
+                order: 0;
             }
-            &-desc {
-                padding: 0;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .course-sections {
-        &__item {
-            &-text-box {
-                flex: 0 0 calc(100% / 12 * 7);
+            &-title {
+                order: 1;
             }
             &-state-box {
+                order: 2;
                 flex: 0 0 calc(100% / 12 * 4);
+            }
+            &-title {
+                padding: 0 15px;
+            }
+            &-title,
+            &-desc {
+                flex: 0 0 calc(100% / 12 * 7);
+            }
+            &-desc {
+                margin-left: calc((100% / 12 * 1) + 15px);
+                padding: 0;
+                order: 3;
             }
         }
     }
@@ -152,21 +149,24 @@
             padding: 15px;
             &-number {
                 font-size: 1.25rem;
+                flex: 0 0 calc(100% / 12 * 1.5);
             }
             &-title {
                 font-size: 1rem;
                 line-height: 25px;
                 margin-top: 10px;
-            }
-            &-text-box {
                 flex: 0 0 calc(100% / 12 * 9);
+                padding: 0 5px;
             }
             &-state-box {
-                flex: 0 0 calc(100% / 12 * 2);
+                flex: 0 0 calc(100% / 12 * 1.5);
             }
             &-desc {
                 font-size: 0.875rem;
                 line-height: 24px;
+                flex: 0 0 100%;
+                margin-left: 0;
+                margin-top: 5px;
             }
             &-state {
                 width: 30px;

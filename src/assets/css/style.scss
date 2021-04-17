@@ -1,9 +1,9 @@
-@import "./modules/normalize.scss";
-@import "./modules/slick.scss";
-@import "./modules/fonts.scss";
-@import "./modules/variables.scss";
-@import "./modules/main.scss";
-@import "./components/header.scss";
+@import "./base/normalize.scss";
+@import "./base/fonts.scss";
+@import "./utils/slick.scss";
+@import "./config/variables.scss";
+@import "./config/global.scss";
+@import "./layout/header.scss";
 @import "./components/courses.scss";
 @import "./components/newsletter.scss";
 @import "./components/section-info.scss";
@@ -16,4 +16,4 @@
 @import "./components/course-sections.scss";
 @import "./components/articles.scss";
 @import "./components/congratulations.scss";
-@import "./components/footer.scss";
+@import "./layout/footer.scss";
